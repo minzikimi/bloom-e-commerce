@@ -1,30 +1,3 @@
-.login-link {
-  color: black;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.input-group {
-  margin-bottom: 1rem;
-  position: relative;
-}
-
-label {
-  display: block;
-  margin-bottom: 0.5rem;
-  font-weight: bold;
-}
-
-input[type="email"],
-input[type="text"],
-input[type="password"] {
-  width: 100%;
-  padding: 0.5rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-}
-
 .password-toggle {
   position: absolute;
   right: 20px;
@@ -40,23 +13,23 @@ input[type="password"] {
   display: flex;
   align-items: center;
   margin-bottom: 1rem;
-}
 
-.checkbox-group input {
-  margin-right: 0.5rem;
+  input {
+    margin-right: 0.5rem;
+  }
 }
 
 .brand-info,
 .terms {
-  font-size: 0.9rem;
-  margin-bottom: 1rem;
+  font-size: 0.7rem;
+  margin-top: 1rem;
 }
-
 .signup-btn {
   background-color: #004d00; 
   color: white; 
   border: none; 
-  padding: .75rem; 
+  padding:0.75rem; 
+  margin-top:2rem;
   width: 100%; 
   font-size: 1rem; 
   font-family: 'Inter', sans-serif; 
@@ -68,41 +41,53 @@ input[type="password"] {
   background-color: #003300; 
 }
 
-/* a {
-  color: black; 
-  
-  text-decoration: none; 
-}
-
-a:hover {
-  text-decoration: underline; 
-} */
-
-.signup-form{
-  background-color: #F8F7F1;
-  padding: 2rem;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  width: 100%;
-  max-width: 600px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--font-main);
-
-  h1{
-    text-align: center;
-    margin-bottom: 1rem;
-  }
-  p{
-    margin-top: 0.5rem;
-    font-size: 1.1rem;
-  }
-}
-
 .signup-container{
   display: flex;
   align-items: center;
   justify-content: center;
+
+  .signup-form{
+    background-color: #F8F7F1;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-main);
+  
+    h1{
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    p{
+      margin-top: 0.5rem;
+      font-size: 1.1rem;
+    }
+
+    .input-group {
+      margin-bottom: 1rem;
+      position: relative;
+    }
+    
+  
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: bold;
+    }
+    
+    input[type="email"],
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+  }
 }
