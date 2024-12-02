@@ -1,0 +1,84 @@
+.about-us {
+  font-weight: 100;
+  font-size: 3rem;
+}
+
+nav{
+  font-family: var(--font-nav);
+}
+
+main {
+  font-size: 1.3rem;
+  font-family: var(--font-main);
+}
+
+
+.title {
+  text-align: center;
+  padding: 3rem 0;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+}
+
+.col {
+  flex: 1;
+  padding: 0 15px;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+}
+
+h1, h2, h4 {
+  margin-bottom: 1rem;
+}
+
+p {
+  line-height: 1.6;
+}
+
+.why-choose-us {
+  background-color: #F8F7F1;
+  padding: 2rem;
+  text-align: center;
+}
+
+.social-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+.btn {
+  padding: 10px 20px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .row {
+      flex-direction: column;
+  }
+  
+  .col {
+      margin-bottom: 2rem;
+  }
+  
+  .social-buttons {
+      flex-direction: column;
+      align-items: center;
+  }
+  
+  .btn {
+      margin-bottom: 1rem;
+  }
+
+  
+}
