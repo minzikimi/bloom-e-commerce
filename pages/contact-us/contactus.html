@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bloom</title>
+    <title>Team8</title>
     <link rel="stylesheet" href="/base-css/base.css">
 
     <link rel="stylesheet" href="/base-css//hero.css">
-    <script src="/js/modal.js" defer></script>
+    <link rel="stylesheet" href="contactus.css">
+    <script src="modal.js" defer></script>
 
 </head>
 <body>
@@ -47,10 +48,48 @@
 
 <main>
     <!-- Main content will go here -->
-
+    <div class="container">
+      <h1>Contact Us</h1>
+      <p>We're here to help with any questions or concerns you might have about our products or services. Whether you're curious about our jewelry, clothing, or accessories, our team is ready to assist you.</p>
+      <p>You can reach out to us via email or live chat for quick assistance. Our customer service team is available Monday to Friday, 9 AM to 6 PM. We aim to respond to all inquiries within 24 hours.</p>
+      <p><strong>We look forward to hearing from you!</strong></p>
+      <div class="form-container">
+          <form action="#" method="post">
+              <div class="First">
+                
+                          <div class="form-group">
+                              <label for="name">First Name / Last Name *</label>
+                              <input type="text" id="name" name="name" required>
+                          </div>
+                          <div class="form-group">
+                              <label for="order-number">Order Number (optional)</label>
+                              <input type="text" id="order-number" name="order-number">
+                          </div>
+                
+                          <div class="form-group">
+                              <label for="email">Email Address *</label>
+                              <input type="email" id="email" name="email" required>
+                          </div>
+                          <div class="form-group">
+                              <label for="title">Title</label>
+                              <input type="text" id="title" name="title">
+                          </div>
+              </div>
+                  <div class="message">
+                      <div class="form-group">
+                          <label for="message">Message</label>
+                          <textarea id="message" name="message" rows="4"></textarea>
+                      </div>
+                  </div>
+              
+              <button type="submit" class="submit-button">SUBMIT</button>
+          </form>
+      </div>
+      <button class="chat-btn">CHAT WITH US!</button>
+  </div>
+  
 </main>
 
-</div>
 <footer class="footer">
   <div class="footer-container">
     <div class="footer-left">
@@ -88,7 +127,7 @@
         <input type="password" class="form-control" placeholder="Password" required>
         <button type="submit" class="btn btn-dark">Log In</button>
     </form>
-    <p>Don't have an account? <a href="/pages/sign-up/signup.html">Sign up</a></p>
+    <p>Don't have an account? <a href="#">Sign up</a></p>
     <button class="close-button" aria-label="Close modal">&times;</button>
 </div>
 </dialog>

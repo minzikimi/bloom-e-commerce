@@ -1,0 +1,122 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+header {
+    background-color: #002400;
+    color: white;
+    padding: 10px 20px;
+}
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+nav {
+    margin-top: 10px;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-right: 15px;
+}
+nav a:hover {
+    text-decoration: underline;
+}
+.container {
+    width: 80%;
+    max-width: 800px;
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    justify-items: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+.form-container {
+    margin: 50px auto;
+    background-color: #F8F7F1; ;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+.container h1 {
+    padding: 20px;
+    text-align: center;
+    color: #002400;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    padding: 2px;
+
+}
+.first {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-bottom: 15px;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.message{
+    display: flex;
+    flex-direction: column;
+   height: 150px;
+   width: 45%;
+ 
+}
+.form-group{
+display: flex;
+flex-direction: column;
+height:  100px;
+}
+
+    label {
+    margin-bottom: 5px;
+    font-weight: bold; 
+
+}
+input, textarea, button {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+textarea {
+    resize: none;
+    height: 100px;
+    width: 200%;
+}
+button {
+    background-color: #004400;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #006600;
+}
+footer {
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #002400;
+    color: white;
+}
+.chat-btn {
+    background-color: #004400;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-align: center;
+    display: block;
+    width: fit-content;
+    margin: 20px auto;
+    cursor: pointer;
+}
+.chat-btn:hover {
+    background-color: #006600;
+}
