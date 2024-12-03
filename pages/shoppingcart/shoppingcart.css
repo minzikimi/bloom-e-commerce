@@ -4,6 +4,7 @@ body {
   padding: 0;
   box-sizing: border-box;
 }
+
 h1 {
   color: #004d00;
   text-align: center;
@@ -17,7 +18,7 @@ h1 {
   margin: 20px;
   gap: 20px;
   position: relative;
-  flex-wrap: wrap; /
+  flex-wrap: wrap;
 }
 
 /* Shopping List */
@@ -105,21 +106,18 @@ h1 {
 
 .item-button {
   display: flex;
-  flex-direction: row; 
-  
+  flex-direction: row;
 }
 
 .item-button img {
-  width: 30px; 
-  margin-right: 8px; 
+  width: 30px;
+  margin-right: 8px;
   vertical-align: middle;
-  
-  
 }
 
 .remove-item,
 .favorite-item {
-  margin-top: 5px; 
+  margin-top: 5px;
   padding: 5px 10px;
   background-color: #ffffff;
   border: none;
@@ -178,8 +176,6 @@ h1 {
   width: 100%;
 }
 
-
-
 .discount,
 .gift-cards {
   text-decoration: underline;
@@ -215,54 +211,53 @@ h1 {
   text-align: center;
   color: #004d00;
   margin-top: 5px;
-  
-  
 }
 
 .payment-icons img {
-  width: 40px; 
-  margin-right: 8px; 
+  width: 40px;
+  margin-right: 8px;
   vertical-align: middle;
-  
-  
 }
 
-
-
+/* RESPONSIVE DESIGN */
 
 @media (max-width: 768px) {
   .container {
     flex-direction: column;
-    gap: 10px;
+    gap: 20px;
   }
 
   .shopping-list {
     width: 100%;
   }
 
-  .order-summary,
-  .payment-methods {
+  .order-summary {
     width: 100%;
     margin-left: 0;
   }
 
   .checkout-now {
     margin-left: 0;
-  }
-
-  
-  .continue-shopping-container {
     width: 100%;
-    text-align: center;
   }
 
   .continue-shopping {
-    width: 80%; 
-    max-width: 200px; 
-    margin: 0 auto;
+    width: 80%;
+    max-width: 300px;
+    margin: 20px auto;
+  }
+
+  .payment-methods {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 20px;
+  }
+
+  .payment-icons img {
+    width: 30px;
+    margin-right: 10px;
   }
 }
-
 
 @media (max-width: 480px) {
   .shopping-item {
@@ -285,5 +280,20 @@ h1 {
 
   .item-quantity button {
     font-size: 12px;
+  }
+
+  .item-button img {
+    width: 25px;
+  }
+
+  .continue-shopping {
+    width: 100%;
+    max-width: 250px;
+    padding: 8px 16px;
+  }
+
+  .checkout-now {
+    width: 100%;
+    padding: 12px 24px;
   }
 }
