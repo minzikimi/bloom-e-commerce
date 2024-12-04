@@ -35,4 +35,4 @@ fetch(apiURL)
       productContainer.appendChild(productElement);
     });
   })
-  .catch(error => console.log("Erro occured:", error));
+  .catch(error => console.log("Error occured:", error));
