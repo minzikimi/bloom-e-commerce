@@ -1,3 +1,5 @@
+
+
 let apiURL = "https://fakestoreapi.com/products";
 
 fetch(apiURL)
@@ -25,14 +27,23 @@ fetch(apiURL)
       priceElement.textContent = `$${product.price.toFixed(2)}`;
       productElement.appendChild(priceElement);
   
-      // Create and append the button
+
       const buttonElement = document.createElement("button");
       // buttonElement.classList = "add-button"
       buttonElement.textContent = "Add to cart";
+      buttonElement.classList ="add-2-cart-btn"
       productElement.appendChild(buttonElement);
   
-      // Finally, append the product card to the container
+
       productContainer.appendChild(productElement);
+
+
+
+      productElement.addEventListener("click", () => onClickCard(product));
+
+
+
     });
   })
   .catch(error => console.log("Erro occured:", error));
+

@@ -1,188 +1,165 @@
-body {
-  font-family: "Vogue", sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #ffffff;
-}
-
-main h1 {
-  font-family: "Vogue", sans-serif;
-  color: #004d00;
-  text-align: center;
-  margin-bottom: 1.5rem;
-}
-/* Main container*/
 .shipping-container {
   display: grid;
-  grid-template-areas:
-    "form summary"
-    "form product";
-  grid-template-columns: 2fr 1fr;
-  gap: 20px;
-  max-width: 1200px;
   margin: 20px auto;
-  padding: 20px;
-}
-/*Form container*/
-.form {
-  grid-area: form;
-  background-color: #f8f7f1;
-  padding: 1.5rem;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
+  grid-template-columns: 1fr 400px;
+  gap: 20px;
+  justify-items: center;
+  max-width: 1200px;
 
-input[type="email"],
-input[type="text"],
-input[type="password"] {
-  width: 100%;
-  padding: 0.5rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  margin-bottom: 1rem;
-}
+  .shipping-form {
+    background-color: #f8f7f1;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    margin-left: 10px;
 
-.underlined {
-  border-bottom: 1px solid #000;
-}
+    h1 {
+      font-family: var(--font-main);
+      color: #004d00;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
 
-.bold-text {
-  font-weight: bold;
-}
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: lighter;
+    }
 
-label {
-  display: block;
-  margin-bottom: 0.5rem;
-  font-weight: normal;
-}
+    input[type="email"],
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      margin-bottom: 1rem;
+    }
 
-.submit-btn {
-  background-color: #004d00;
-  color: white;
-  border: none;
-  padding: 0.75rem;
-  width: 50%;
-  font-size: 1rem;
-  cursor: pointer;
-  border-radius: 4px;
-  margin-top: 15px;
-}
+    .form-group-checkbox {
+      display: flex;
+      gap: 1rem;
+    }
 
-.submit-btn:hover {
-  background-color: #003300;
-}
+    .billing-btn {
+      background-color: #004d00;
+      color: white;
+      border: none;
+      padding: 0.75rem;
+      width: 100%;
+      font-size: 1rem;
+      font-family: var(--font-nav);
+      cursor: pointer;
+      border-radius: 4px;
+      margin-top: 0.5rem;
 
-/*order summary on the right side*/
-.order-summary {
-  background-color: #f8f7f1;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.order-summary h2 {
-  font-family: Vogue, sans-serif;
-  color: rgb(0, 77, 0);
-  text-align: center;
-  margin-bottom: 20px;
-  font-size: 24px;
-  margin-top: 1rem;
-}
-
-.summary-item {
-  display: flex;
-  justify-content: space-between;
-  padding: 10px 0;
-  border-bottom: 1px solid #000;
-  font-weight: bold;
-}
-
-/*in your chart*/
-.product-item {
-  background-color: #f8f7f1;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.product-item h2 {
-  font-family: Vogue, sans-serif;
-  color: rgb(0, 77, 0);
-  text-align: center;
-  margin-bottom: 20px;
-  font-size: 24px;
-  margin-top: 1rem;
-}
-
-.summary ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-.summary li {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 1rem;
-}
-
-.line {
-  width: 100%;
-  height: 1px;
-  background-color: #000;
-  margin: 1rem 0;
-}
-
-.product-details {
-  display: flex;
-  align-items: center;
-}
-
-.product-image {
-  width: 80px;
-  margin-right: 1rem;
-}
-
-.product-info {
-  font-weight: normal;
-}
-
-.product-name {
-  font-weight: bold;
-}
-.product-price {
-  color: #888;
-}
-
-.icons-container {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-}
-
-.icon-text {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-}
-
-.icon-text img {
-  width: 20px;
-  height: 20px;
-  margin-right: 10px;
-}
-@media (max-width: 768px) {
-  .shipping-container {
-    grid-template-areas:
-      "form"
-      "summary"
-      "product";
-    grid-template-columns: 1fr;
-    gap: 10px;
+      &:hover {
+        background-color: #003300;
+      }
+    }
   }
 
-  .form,
-  .summary,
-  .product-item {
-    max-width: 100%;
+  .summary {
+    background-color: #f8f7f1;
+    padding: 20px;
+    font-weight: bold;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    margin: 0;
+
+    h2 {
+      margin-bottom: 2rem;
+    }
+
+    ul {
+      padding: 0;
+      margin: 0;
+    }
+
+    li {
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 5px;
+      border-bottom: 1px solid #000000;
+      margin-bottom: 0.75rem;
+    }
+
+    .price {
+      text-align: left;
+      white-space: nowrap;
+    }
+
+    .product-item {
+      grid-column: 2;
+      background-color: #f8f7f1;
+      width: 100%;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border-radius: 5px;
+      margin-top: 10px;
+
+      h3 {
+        color: #004d00;
+        text-align: center;
+        margin-bottom: 1rem;
+        font-size: 18px;
+        margin-top: 1rem;
+      }
+
+      .product-details {
+        display: flex;
+        align-items: center;
+      }
+
+      .product-image {
+        width: 100px;
+        height: auto;
+        margin-right: 20px;
+      }
+
+      .product-name,
+      .product-price {
+        margin-left: 30px;
+        height: auto;
+      }
+
+      .product-info {
+        font-weight: lighter;
+        text-align: left;
+        margin-right: 10px;
+      }
+
+      .edit-container {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        width: 100%;
+        margin-top: 10px;
+      }
+    }
+  }
+
+  .underlined {
+    text-decoration: underline;
+  }
+
+  .bold-text {
+    font-weight: bold;
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+
+    .shipping-form,
+    .summary {
+      max-width: 90%;
+    }
   }
 }
