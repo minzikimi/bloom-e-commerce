@@ -4,13 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bloom</title>
-    <link rel="stylesheet" href="/bloom-e-commerce/base-css/base.css" />
+    <link rel="stylesheet" href="/base-css/base.css" />
     <link
       rel="stylesheet"
-      href="/bloom-e-commerce/pages/shoppingcart/shoppingcart.css"
+      href="shoppingcart.css">
       <link
       rel="stylesheet"
-      href="/bloom-e-commerce/base-css/hero.css"
+      href="/base-css/hero.css"
     />
     <script src="/js/modal.js" defer></script>
   </head>
@@ -65,96 +65,83 @@
     </header>
 
     <main>
-      <!-- Main content will go here -->
-      <h1>SHOPPING CART</h1>
-      <div class="container">
-        <!-- Shopping List Section -->
-        <div class="shopping-list">
-          <!-- Shopping Item -->
-          <div class="shopping-item">
-            <button class="close-button">X</button>
-            <img src="/bloom-e-commerce/pages/shoppingcart/img/shinebright.webp" alt="Diamond Ring" class="item-image" />
-            <div class="item-details">
-              <div class="item-info">
-                <span class="item-name">DIAMOND RING</span>
-                <span class="item-price">100.00 SEK</span>
-              </div>
-              <div class="item-actions">
-                <div class="item-quantity">
-                  <button>-</button>
-                  <span>1</span>
-                  <button>+</button>
+      <section class="shopping-cart-container">
+        <h1 class="shopping-cart-title">Shoping Cart</h1>
+        <div class="container">
+            <!-- Shopping List Section -->
+            <section class="shopping-list">
+                <!-- Shopping Item -->
+                <article class="shopping-item">
+                    <button class="close-button" aria-label="Remove item">X</button>
+                    <img src="/pages/shoppingcart/img/shinebright.webp" alt="Diamond Ring" class="item-image" />
+                    <div class="item-details">
+                        <div class="item-info">
+                            <h2 class="item-name">DIAMOND RING</h2>
+                            <p class="item-price">100.00 SEK</p>
+                        </div>
+                        <div class="item-actions">
+                            <div class="item-quantity">
+                                <button aria-label="Decrease quantity">-</button>
+                                <span aria-label="Quantity">1</span>
+                                <button aria-label="Increase quantity">+</button>
+                            </div>
+                            <div class="item-button">
+                                <img src="/pages/shoppingcart/img/heart-svgrepo-com.png" alt="Favorite" />
+                                <button class="favorite-item">FAVORITE</button>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <div class="continue-shopping-container">
+                  <a href="/pages/product-listing/listing.html" class="continue-shopping">CONTINUE SHOPPING</a>
                 </div>
-                <div class="item-button">
-                  <img 
-            src="/bloom-e-commerce/pages/shoppingcart/img/heart-svgrepo-com.png"
-            alt="Apple Pay"
-          />
-                  <button class="favorite-item">FAVORITE</button>
+            </section>
+
+            <!-- Sidebar for Order Summary and Payment Methods -->
+            <div class="sidebar">
+                <!-- Order Summary Section -->
+                <div class="order-summary">
+                    <h2>ORDER SUMMARY</h2>
+                    <dl class="summary-items">
+                        <div class="summary-item">
+                            <p>Subtotal</p>
+                            <p>100.00 SEK</p>
+                        </div>
+                        <div class="summary-item">
+                            <p>Estimated Shipping</p>
+                            <p>45.00 SEK</p>
+                        </div>
+                        <div class="summary-item total-item">
+                            <p>Estimated Total</p>
+                            <p>145.00 SEK</p>
+                        </div>
+                    </dl>
+
+                    <div class="discount">
+                        <button class="discount-link">Add/remove discount code +</button>
+                    </div>
+                    <div class="gift-cards">
+                        <button class="gift-cards-link">Gift cards +</button>
+                    </div>
+
+                    <a href="/pages/checkout/checkout.html" class="checkout-now">CHECKOUT NOW</a>
                 </div>
-              </div>
-            </div>
-          </div>
 
-          <!-- Continue Shopping Button -->
-          <div class="continue-shopping-container">
-            <button class="continue-shopping">CONTINUE SHOPPING</button>
-          </div>
-        </div>
-
-        <!-- Order Summary Section -->
-        <div class="order-summary">
-          <h2>ORDER SUMMARY</h2>
-          <div class="summary-item">
-            <span>Subtotal</span>
-            <span>100.00 SEK</span>
-          </div>
-          <div class="summary-item">
-            <span>Estimated Shipping</span>
-            <span>45.00 SEK</span>
-          </div>
-          <div class="summary-item">
-            <span>Estimated Total</span>
-            <span>145.00 SEK</span>
-          </div>
-
-          <div class="discount">
-            <p class="discount-link">Add/remove discount code +</p>
-          </div>
-          <div class="gift-cards">
-            <p class="gift-cards">Gift cards +</p>
-          </div>
-
-          <button class="checkout-now">CHECKOUT NOW</button>
-        </div>
-      </div>
-
-      <!-- Payment Methods Section -->
-      <div class="payment-methods">
-        <h2>Payment Methods</h2>
-        <div class="payment-icons">
-          <img
-            src="/bloom-e-commerce/pages/shoppingcart/img/visa-3-svgrepo-com.png"
-            alt="Visa"
-          />
-          <img
-            src="/bloom-e-commerce/pages/shoppingcart/img/mastercard-svgrepo-com.png"
-            alt="Mastercard"
-          />
-          <img
-            src="/bloom-e-commerce/pages/shoppingcart/img/paypal-svgrepo-com.png"
-            alt="PayPal"
-          />
-          <img
-            src="/bloom-e-commerce/pages/shoppingcart/img/klarna-svgrepo-com.png"
-            alt="Klarna"
-          />
-          <img
-            src="/bloom-e-commerce/pages/shoppingcart/img/card-apple-pay-solid-svgrepo-com.png"
-            alt="Apple Pay"
-          />
-        </div>
-      </div>
+                <!-- Payment Methods Section -->
+                <div class="payment-methods">
+                    <h2>Payment Methods</h2>
+                    <div class="payment-icons">
+                        <img src="/pages/shoppingcart/img/visa-3-svgrepo-com.png" alt="Visa" />
+                        <img src="/pages/shoppingcart/img/mastercard-svgrepo-com.png" alt="Mastercard" />
+                        <img src="/pages/shoppingcart/img/paypal-svgrepo-com.png" alt="PayPal" />
+                        <img src="/pages/shoppingcart/img/klarna-svgrepo-com.png" alt="Klarna" />
+                        <img src="/pages/shoppingcart/img/card-apple-pay-solid-svgrepo-com.png" alt="Apple Pay" />
+                    </div>
+                </div>
+            </div> <!-- End of sidebar -->
+        </div> <!-- End of container -->
+    </section>
     </main>
 
     <footer class="footer">

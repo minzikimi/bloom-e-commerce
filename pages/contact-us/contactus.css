@@ -1,122 +1,130 @@
-body {
-    margin: 0;
-    padding: 0;
-    background-color: #f9f9f9;
-}
-header {
-    background-color: #002400;
-    color: white;
-    padding: 10px 20px;
-}
-header .logo {
-    font-size: 24px;
-    font-weight: bold;
-}
-nav {
-    margin-top: 10px;
-}
-nav a {
-    color: white;
-    text-decoration: none;
-    margin-right: 15px;
-}
-nav a:hover {
-    text-decoration: underline;
-}
-.container {
-    width: 80%;
-    max-width: 800px;
-    margin: 20px auto;
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    justify-items: center;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-.form-container {
-    margin: 50px auto;
-    background-color: #F8F7F1; ;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-.container h1 {
-    padding: 20px;
-    text-align: center;
-    color: #002400;
-}
-form {
+.contactus-intro {
     display: flex;
-    flex-direction: column;
-    padding: 2px;
-
-}
-.first {
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-    margin-bottom: 15px;
-    justify-content: space-between;
     align-items: center;
-
-}
-.message{
-    display: flex;
     flex-direction: column;
-   height: 150px;
-   width: 45%;
- 
-}
-.form-group{
-display: flex;
-flex-direction: column;
-height:  100px;
+    justify-content: center;
+
+
+    h2, p {
+        font-family: var(--font-main);
+   
+    }
+
+    .text-wrapper{
+        text-align: center;
+        font-size: 1.2rem;
+        text-align: center;
+        
+
+        #last-message{
+            padding:2rem;
+            font-size: 1.7rem;
+            font-weight: bold;
+            text-decoration: underline;
+        }
+    }
+
 }
 
-    label {
-    margin-bottom: 5px;
-    font-weight: bold; 
+.contactus-form-container {
+    background-color: var(--secondary-color);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 2rem;
 
+    .contact-form {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        .form-row {
+            display: flex;
+            gap: 1rem;
+
+            .form-group {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+
+                label {
+                    margin-bottom: 0.5rem;
+                    font-weight: bold;
+                    font-family: var(--font-main);
+                }
+
+                input {
+                    padding: 0.75rem;
+                    font-size: 1rem;
+                    border: 1px solid #ddd;
+                    border-radius: 4px;
+                    font-family: inherit;
+
+                    &:focus {
+                        outline-color: var(--accent-color);
+                    }
+                }
+
+             
+            }
+        }
+    }
+
+    .submit-button {
+        background-color: var(--accent-color);
+        color: white;
+        border: none;
+        padding: 0.75rem 1.5rem;
+        font-size: 1rem;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+            background-color: #006600;
+        }
+    }
 }
-input, textarea, button {
-    padding: 10px;
-    font-size: 16px;
+
+
+textarea {
+    padding: 0.75rem; 
+    font-size: 1rem;
     border: 1px solid #ddd;
     border-radius: 4px;
+    width: 100%;
+
+    &:focus {
+        outline-color: var(--accent-color);
+    }
 }
-textarea {
-    resize: none;
-    height: 100px;
-    width: 200%;
-}
-button {
-    background-color: #004400;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-button:hover {
-    background-color: #006600;
-}
-footer {
-    text-align: center;
-    margin-top: 20px;
-    padding: 10px;
-    background-color: #002400;
-    color: white;
-}
+
 .chat-btn {
-    background-color: #004400;
+    background-color: var(--accent-color);
     color: white;
     border: none;
-    padding: 10px 20px;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
     border-radius: 4px;
-    text-align: center;
-    display: block;
-    width: fit-content;
-    margin: 20px auto;
     cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    display: block; 
+    width: fit-content; 
+    margin-top: 2rem; 
+    margin-bottom:5rem;
+    
+    &:hover {
+        background-color: #006600; 
+    }
 }
-.chat-btn:hover {
-    background-color: #006600;
+
+@media (max-width: 768px) {
+    .contactus-form-container .contact-form .form-row {
+        flex-direction: column;
+
+        .form-group {
+            width: 100%;
+        }
+    }
 }
