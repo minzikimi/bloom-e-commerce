@@ -1,5 +1,12 @@
+<<<<<<< HEAD
 // shoppingCart.js
 
+=======
+// const addToCartBtn = document.querySelector(".add-2-cart-btn");
+// const shoppingCartIcon = document.querySelector(".shopping-cart-icon");
+// const removeItemBtn = document.querySelector("#remove-item-button");
+// const itemImg = document.querySelector("#item-image")
+>>>>>>> main
 const ITEM_KEY = "cartitems";
 
 
@@ -27,22 +34,41 @@ function onClickAddToCart (event, product){
 }
 
 
+<<<<<<< HEAD
 
 function displayProducts(cart) {
   const emptyMessage = document.querySelector("#shopping-cart-empty-message");
   const shoppingCart = document.querySelector(".shopping-list");
 
   if (cart.length === 0) {
+=======
+function displayProducts(cartFromLocalStorage) {
+  const emptyMessage = document.querySelector("#shopping-cart-empty-message");
+  const shoppingCart = document.querySelector(".shopping-list");
+
+
+  if (cartFromLocalStorage.length === 0) {
+>>>>>>> main
     emptyMessage.textContent = "Your cart is empty.";
   } else {
     emptyMessage.textContent = "";
     shoppingCart.innerHTML = "";
+<<<<<<< HEAD
 
     cart.forEach((product, index) => {
+=======
+    
+
+    cartFromLocalStorage.forEach(product => {
+>>>>>>> main
       const productCard = document.createElement("div");
       productCard.className = "shopping-item-card";
       shoppingCart.appendChild(productCard);
 
+<<<<<<< HEAD
+=======
+  
+>>>>>>> main
       const productImage = document.createElement("img");
       productImage.src = product.image;
       productImage.alt = product.title;
@@ -70,15 +96,19 @@ function displayProducts(cart) {
       const removeItemButton = document.createElement("button");
       removeItemButton.className = "remove-item-button";
       productCard.appendChild(removeItemButton);
+<<<<<<< HEAD
       
       // Add event listener for removing items
       removeItemButton.addEventListener("click", () => {
         onClickRemoveFromCart(index, productCard); // Pass the card element
       });
+=======
+>>>>>>> main
     });
   }
 }
 
+<<<<<<< HEAD
 function onClickRemoveFromCart(index, productCard) {
   let cart = loadFromLocalStorage();
   cart.splice(index, 1); 
@@ -98,6 +128,8 @@ function onClickRemoveFromCart(index, productCard) {
 }
 
 
+=======
+>>>>>>> main
 document.addEventListener("DOMContentLoaded", () => {
   const shoppingCart = document.querySelector(".shopping-list");
   if (shoppingCart) {
