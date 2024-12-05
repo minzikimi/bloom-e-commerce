@@ -1,3 +1,5 @@
+// apiFetch.js
+
 async function fetchAPI() {
   const apiURL = "https://fakestoreapi.com/products";
 
