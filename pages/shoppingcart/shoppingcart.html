@@ -4,15 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bloom</title>
-    <link rel="stylesheet" href="/bloom-e-commerce/base-css/base.css" />
+    <link rel="stylesheet" href="/base-css/base.css" />
     <link
       rel="stylesheet"
-      href="/bloom-e-commerce/pages/shoppingcart/shoppingcart.css"
+      href="shoppingcart.css">
       <link
       rel="stylesheet"
-      href="/bloom-e-commerce/base-css/hero.css"
+      href="/base-css/hero.css"
     />
     <script src="/js/modal.js" defer></script>
+    <script src="/js/shoppingCart.js" defer></script>
+    <script src="/js/apiFetch.js" defer></script>
   </head>
   <body>
     <header class="site-header">
@@ -36,18 +38,6 @@
         </div>
 
         <div class="nav-icons">
-          <a href="#" class="icon-link" id="login-icon">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              width="24"
-              height="24"
-            >
-              <path
-                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"
-              />
-            </svg>
-          </a>
           <a href="shoppingcart.html" class="icon-link" id="shopping-cart-icon">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -60,102 +50,107 @@
               />
             </svg>
           </a>
+          <a href="#" class="icon-link" id="login-icon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              width="24"
+              height="24"
+            >
+              <path
+                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"
+              />
+            </svg>
+          </a>
+    
         </div>
       </nav>
     </header>
 
-    <main>
-      <!-- Main content will go here -->
-      <h1>SHOPPING CART</h1>
-      <div class="container">
-        <!-- Shopping List Section -->
-        <div class="shopping-list">
-          <!-- Shopping Item -->
-          <div class="shopping-item">
-            <button class="close-button">X</button>
-            <img src="/bloom-e-commerce/pages/shoppingcart/img/shinebright.webp" alt="Diamond Ring" class="item-image" />
-            <div class="item-details">
-              <div class="item-info">
-                <span class="item-name">DIAMOND RING</span>
-                <span class="item-price">100.00 SEK</span>
-              </div>
-              <div class="item-actions">
-                <div class="item-quantity">
-                  <button>-</button>
-                  <span>1</span>
-                  <button>+</button>
-                </div>
-                <div class="item-button">
-                  <img 
-            src="/bloom-e-commerce/pages/shoppingcart/img/heart-svgrepo-com.png"
-            alt="Apple Pay"
-          />
-                  <button class="favorite-item">FAVORITE</button>
-                </div>
-              </div>
+    <main class="shopping-cart">
+      <div>
+        <h1 class="shopping-cart-title">Shoping Cart</h1>
+      </div>
+      <section class="shopping-cart-container">
+        <div class="shopping-cart-wrapper">
+            <!-- Shopping List Section -->
+            <div class="shopping-list">
+              <p id="shopping-cart-empty-message"></p>
+      
+                <!-- <div class="shopping-item-display">
+                    <button id="remove-item-button" aria-label="Remove item">
+                     
+                    </button>
+                    <img src="/pages/shoppingcart/img/shinebright.webp" alt="Diamond Ring" id="item-image" />
+                    <div class="item-details">
+                        <div class="item-info">
+                            <h2 class="item-name">DIAMOND RING</h2>
+                            <p class="item-price">100.00 SEK</p>
+                        </div>
+                        <div class="item-actions">
+                            <div class="item-quantity">
+                                <button aria-label="Decrease quantity">-</button>
+                                <span aria-label="Quantity">1</span>
+                                <button aria-label="Increase quantity">+</button>
+                            </div>
+                            <div class="item-button">
+                                <img src="/pages/shoppingcart/img/heart-svgrepo-com.png" alt="Favorite" />
+                                <button class="favorite-item">FAVORITE</button>
+                            </div>
+                        </div>
+                    </div>
+                </div> --> 
             </div>
-          </div>
+            <div class="continue-shopping-container">
+              <a href="/pages/product-listing/listing.html" class="continue-shopping">CONTINUE SHOPPING</a>
+            </div>
 
-          <!-- Continue Shopping Button -->
-          <div class="continue-shopping-container">
-            <button class="continue-shopping">CONTINUE SHOPPING</button>
-          </div>
-        </div>
+  
+        </div> <!-- End of container -->
 
-        <!-- Order Summary Section -->
-        <div class="order-summary">
-          <h2>ORDER SUMMARY</h2>
-          <div class="summary-item">
-            <span>Subtotal</span>
-            <span>100.00 SEK</span>
-          </div>
-          <div class="summary-item">
-            <span>Estimated Shipping</span>
-            <span>45.00 SEK</span>
-          </div>
-          <div class="summary-item">
-            <span>Estimated Total</span>
-            <span>145.00 SEK</span>
-          </div>
-
-          <div class="discount">
-            <p class="discount-link">Add/remove discount code +</p>
-          </div>
-          <div class="gift-cards">
-            <p class="gift-cards">Gift cards +</p>
-          </div>
-
-          <button class="checkout-now">CHECKOUT NOW</button>
-        </div>
-        
-      </div>
-
-      <!-- Payment Methods Section -->
-      <div class="payment-methods">
-        <h2>Payment Methods</h2>
-        <div class="payment-icons">
-          <img
-            src="/bloom-e-commerce/pages/shoppingcart/img/visa-3-svgrepo-com.png"
-            alt="Visa"
-          />
-          <img
-            src="/bloom-e-commerce/pages/shoppingcart/img/mastercard-svgrepo-com.png"
-            alt="Mastercard"
-          />
-          <img
-            src="/bloom-e-commerce/pages/shoppingcart/img/paypal-svgrepo-com.png"
-            alt="PayPal"
-          />
-          <img
-            src="/bloom-e-commerce/pages/shoppingcart/img/klarna-svgrepo-com.png"
-            alt="Klarna"
-          />
-          <img
-            src="/bloom-e-commerce/pages/shoppingcart/img/card-apple-pay-solid-svgrepo-com.png"
-            alt="Apple Pay"
-          />
-        </div>
-      </div>
+                  <!-- Sidebar for Order Summary and Payment Methods -->
+                  <div class="sidebar">
+                    <!-- Order Summary Section -->
+                    <div class="order-summary">
+                        <h2>ORDER SUMMARY</h2>
+                        <dl class="summary-items">
+                            <div class="summary-item">
+                                <p>Subtotal</p>
+                                <p> SEK</p>
+                            </div>
+                            <div class="summary-item">
+                                <p>Estimated Shipping</p>
+                                <p> SEK</p>
+                            </div>
+                            <div class="summary-item total-item">
+                                <p>Estimated Total</p>
+                                <p> SEK</p>
+                            </div>
+                        </dl>
+    
+                        <div class="discount">
+                            <button class="discount-link">Add/remove discount code +</button>
+                        </div>
+                        <div class="gift-cards">
+                            <button class="gift-cards-link">Gift cards +</button>
+                        </div>
+    
+                        <a href="/pages/checkout/checkout.html" class="checkout-now">CHECKOUT NOW</a>
+                    </div>
+    
+                    <!-- Payment Methods Section -->
+                    <div class="payment-methods">
+                        <h2>Payment Methods</h2>
+                        <div class="payment-icons">
+                            <img src="/pages/shoppingcart/img/visa-3-svgrepo-com.png" alt="Visa" />
+                            <img src="/pages/shoppingcart/img/mastercard-svgrepo-com.png" alt="Mastercard" />
+                            <img src="/pages/shoppingcart/img/paypal-svgrepo-com.png" alt="PayPal" />
+                            <img src="/pages/shoppingcart/img/klarna-svgrepo-com.png" alt="Klarna" />
+                            <img src="/pages/shoppingcart/img/card-apple-pay-solid-svgrepo-com.png" alt="Apple Pay" />
+                        </div>
+                    </div>
+                </div> <!-- End of sidebar -->
+    </section>
     </main>
 
     <footer class="footer">
@@ -218,3 +213,4 @@
     </dialog>
   </body>
 </html>
+

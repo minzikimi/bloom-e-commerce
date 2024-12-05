@@ -1,0 +1,30 @@
+.terms-conditions-wrapper{
+  font-family: var(--font-main);
+
+  .title {
+    text-align: center;
+    margin: 0;
+    color:var(--accent-color);
+}
+  section {
+    margin-bottom: 20px;
+  }
+
+  section h2 {
+    color: var(--accent-color);
+    margin-bottom: 10px;
+  }
+
+  section p {
+    margin: 0 0 10px;
+  }
+
+  a {
+    color:var(--accent-color);
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+}

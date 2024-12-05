@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bloom</title>
+    <link rel="icon" type="image/x-icon" sizes="48x48" href="/favicon.ico.png">
     <link rel="stylesheet" href="/base-css/base.css">
 
     <link rel="stylesheet" href="/base-css//hero.css">
+    <link rel="stylesheet" href="contactus.css">
     <script src="/js/modal.js" defer></script>
 
 </head>
@@ -33,24 +35,64 @@
 
 
             <div class="nav-icons">
+                <a href="/pages/shoppingcart/shoppingcart.html"  class="icon-link" id="shopping-cart-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"  width="24" height="24"><path d="M96 152l0 8-48 0 0-8C48 68.1 116.1 0 200 0l48 0c83.9 0 152 68.1 152 152l0 8-48 0 0-8c0-57.4-46.6-104-104-104l-48 0C142.6 48 96 94.6 96 152zM0 224c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-5.1 0L388.5 469c-2.6 24.4-23.2 43-47.7 43l-233.6 0c-24.6 0-45.2-18.5-47.7-43L37.1 256 32 256c-17.7 0-32-14.3-32-32z"/></svg>
+                </a>
                 <a href="#" class="icon-link" id="login-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
                         <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/>
                     </svg>
                 </a>
-                <a href="/pages/shoppingcart/shoppingcart.html"  class="icon-link" id="shopping-cart-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"  width="24" height="24"><path d="M96 152l0 8-48 0 0-8C48 68.1 116.1 0 200 0l48 0c83.9 0 152 68.1 152 152l0 8-48 0 0-8c0-57.4-46.6-104-104-104l-48 0C142.6 48 96 94.6 96 152zM0 224c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-5.1 0L388.5 469c-2.6 24.4-23.2 43-47.7 43l-233.6 0c-24.6 0-45.2-18.5-47.7-43L37.1 256 32 256c-17.7 0-32-14.3-32-32z"/></svg>
-                </a>
             </div>
         </nav>     
     </header>
 
-<main>
-    <!-- Main content will go here -->
+    <main>
+        <div class="container">
+            <div class="contactus-intro">
+                <div class="title">
+                    <h2 class="page-title" style="margin-bottom: -0.3rem;">Contact us</h2>
+                </div>
+                <div class="text-wrapper">
+                    <p>You can contact us by filling out the contact form below or via live chat for quick assistance. Our customer service team is available Monday to Friday, 9 AM to 6 PM. We aim to respond to all inquiries within 24 hours.  I guess this should be ok? just changed it out to contact form instead of email</p> 
+                    <p id="last-message">We look forward to hearing from you!</p>
+                </div>
+             
+            </div>
+            
+            <div class="contactus-form-container">
+                <form action="#" method="post" class="contact-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">First Name / Last Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="order-number">Order Number (optional)</label>
+                            <input type="text" id="order-number" name="order-number">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="title">Title</label>
+                            <input type="text" id="title" name="title">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="message" style="font-weight: bold;">Message</label>
+                        <textarea id="message" name="message" rows="4"></textarea>
+                    </div>
+                    <button type="submit" class="submit-button">SUBMIT</button>
+                </form>
+            </div>
+            <button class="chat-btn">CHAT WITH US!</button>
+        </div>
+    </main>
 
-</main>
-
-</div>
 <footer class="footer">
   <div class="footer-container">
     <div class="footer-left">
@@ -88,7 +130,7 @@
         <input type="password" class="form-control" placeholder="Password" required>
         <button type="submit" class="btn btn-dark">Log In</button>
     </form>
-    <p>Don't have an account? <a href="/pages/sign-up/signup.html">Sign up</a></p>
+    <p>Don't have an account? <a href="#">Sign up</a></p>
     <button class="close-button" aria-label="Close modal">&times;</button>
 </div>
 </dialog>
