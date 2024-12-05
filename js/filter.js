@@ -10,7 +10,7 @@ function setupFilters() {
 }
 
 function applyFilters() {
-  let filteredProducts = products; // Use the global products array
+  let filteredProducts = products; 
 
   const categoryFilter = document.getElementById('category-filter');
   const ratingFilter = document.getElementById('rating-filter');
