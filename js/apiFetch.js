@@ -1,49 +1,70 @@
+// apiFetch.js
 
+async function fetchAPI() {
+  const apiURL = "https://fakestoreapi.com/products";
 
-let apiURL = "https://fakestoreapi.com/products";
+  try {
+    const res = await fetch(apiURL);
 
-fetch(apiURL)
-  .then(res => res.json())
-  .then(json => {
-    console.log(json);
-    const productContainer = document.querySelector(".product-grid");
-    json.forEach(product => {
-      const productElement = document.createElement("div");
-      productElement.className = "product-card";
-  
-      // Create and append the image
-      const imgElement = document.createElement("img");
-      imgElement.src = product.image;
-      imgElement.alt = product.title;
-      productElement.appendChild(imgElement);
-  
-      // Create and append the title
-      const titleElement = document.createElement("h3");
-      titleElement.textContent = product.title;
-      productElement.appendChild(titleElement);
-  
-      // Create and append the price
-      const priceElement = document.createElement("p");
-      priceElement.textContent = `$${product.price.toFixed(2)}`;
-      productElement.appendChild(priceElement);
-  
+    if (!res.ok) throw new Error("Failed to fetch items");
 
-      const buttonElement = document.createElement("button");
-      // buttonElement.classList = "add-button"
-      buttonElement.textContent = "Add to cart";
-      buttonElement.classList ="add-2-cart-btn"
-      productElement.appendChild(buttonElement);
-  
+    products = await res.json(); 
 
-      productContainer.appendChild(productElement);
+    console.log(products);
+    renderProducts(products); 
+    setupFilters(); 
 
+  } catch (error) {
+    console.log("Error occurred:", error);
+  }
+}
 
+function renderProducts(productsToRender) {
+  const productContainer = document.querySelector(".product-grid");
+  productContainer.innerHTML = "";
 
-      productElement.addEventListener("click", () => onClickCard(product));
+  productsToRender.forEach(product => {
+    const card = document.createElement("div");
+    card.className = "product-card";
 
+    const productDetailsElement = document.createElement("div");
+    productDetailsElement.className = "product-details";
 
+    const imgElement = document.createElement("img");
+    imgElement.src = product.image;
+    imgElement.alt = product.title;
+    productDetailsElement.appendChild(imgElement);
 
+    const titleElement = document.createElement("h3");
+    titleElement.textContent = product.title;
+    productDetailsElement.appendChild(titleElement);
+
+    const priceElement = document.createElement("p");
+    priceElement.textContent = `$${product.price.toFixed(2)}`;
+    productDetailsElement.appendChild(priceElement);
+
+    card.appendChild(productDetailsElement);
+
+    const buttonContainer = document.createElement("div");
+    buttonContainer.className = "button-container";
+
+    const buttonElement = document.createElement("button");
+    buttonElement.textContent = "Add to cart";
+    buttonElement.className = "add-2-cart-btn";
+    buttonContainer.appendChild(buttonElement);
+    card.appendChild(buttonContainer);
+
+    productContainer.appendChild(card);
+
+    //open item detail modal box
+    productDetailsElement.addEventListener("click", () => onClickCard(product));
+
+    //upon clicking addtocart button
+    buttonElement.addEventListener("click", (e) => {
+      onClickAddToCart(e,product);
     });
-  })
-  .catch(error => console.log("Erro occured:", error));
+  });
+}
 
+
+document.addEventListener("DOMContentLoaded", fetchAPI);
