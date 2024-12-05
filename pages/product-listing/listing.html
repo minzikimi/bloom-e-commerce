@@ -6,10 +6,13 @@
     <title>Bloom</title>
     <link rel="stylesheet" href="/base-css/base.css">
     <link rel="stylesheet" href="listing.css">
-    <link rel="stylesheet" href="/base-css//hero.css">
+    <!-- <link rel="stylesheet" href="/base-css/hero.css"> -->
     <script src="/js/modal.js" defer></script>
-    <script src="/js/apiFetch.js" defer></script>
     <script src="/js/displayItemDetail.js" defer></script>
+    <script src="/js/apiFetch.js" defer></script> <!-- Ensure this loads after modal.js -->
+    <script src="/js/filter.js" defer></script>
+
+    <script src="/js/shoppingCart.js" defer></script>
 
 </head>
 <body>
@@ -35,13 +38,13 @@
 
 
             <div class="nav-icons">
+              <a href="/pages/shoppingcart/shoppingcart.html"  class="icon-link" id="shopping-cart-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"  width="24" height="24"><path d="M96 152l0 8-48 0 0-8C48 68.1 116.1 0 200 0l48 0c83.9 0 152 68.1 152 152l0 8-48 0 0-8c0-57.4-46.6-104-104-104l-48 0C142.6 48 96 94.6 96 152zM0 224c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-5.1 0L388.5 469c-2.6 24.4-23.2 43-47.7 43l-233.6 0c-24.6 0-45.2-18.5-47.7-43L37.1 256 32 256c-17.7 0-32-14.3-32-32z"/></svg>
+            </a>
                 <a href="#" class="icon-link" id="login-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
                         <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/>
                     </svg>
-                </a>
-                <a href="/pages/shoppingcart/shoppingcart.html"  class="icon-link" id="shopping-cart-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"  width="24" height="24"><path d="M96 152l0 8-48 0 0-8C48 68.1 116.1 0 200 0l48 0c83.9 0 152 68.1 152 152l0 8-48 0 0-8c0-57.4-46.6-104-104-104l-48 0C142.6 48 96 94.6 96 152zM0 224c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-5.1 0L388.5 469c-2.6 24.4-23.2 43-47.7 43l-233.6 0c-24.6 0-45.2-18.5-47.7-43L37.1 256 32 256c-17.7 0-32-14.3-32-32z"/></svg>
                 </a>
             </div>
         </nav>     
@@ -54,15 +57,41 @@
     <p>Explore a curated selection of products, filter their preferences, and easily find items that meet their needs, all while enjoying a seamless shopping experience.</p>
     </div>
     <div class="filters">
-      <label for="category-filter">Filter by Category:</label>
-      <select id="category-filter">
-          <option value="all">All Categories</option>
-          <option value="electronics">Electronics</option>
-          <option value="clothing">Clothing</option>
-          <option value="Jewelry">Jewelry</option>
-          <option value="Accessory">Accessory</option>
-      </select>
+      <div>
+        <label for="category-filter">Filter by Category:</label>
+        <select id="category-filter">
+            <option value="all">All Categories</option>
+            <option value="electronics">Electronics</option>
+            <!-- <option value="clothing">Clothing</option> -->
+            <option value="Jewelery">Jewelry</option>
+            <!-- <option value="Accessory">Accessories</option> -->
+            <option value="men's clothing">Men's Clothing</option>
+            <option value="women's clothing">Women's Clothing</option>
+        </select>
+      </div>
+     
+      <div>
+        <label for="rating-filter">Filter by rating:</label>
+        <select id="rating-filter">
+            <option value="all">All Ratings</option>
+            <option value="4">4 Stars & Up</option>
+            <option value="3">3 Stars & Up</option>
+            <option value="2">2 Stars & Up</option>
+            <option value="1">1 Star & Up</option>
+        </select>
+      </div>
+      <div>
+        <label for="price-filter">Filter by Price:</label>
+        <select id="price-filter">
+          <option value="all">All Prices</option>
+          <option value="0-50">$0 - $50</option>
+          <option value="50-100">$50 - $100</option>
+          <option value="100-200">$100 - $200</option>
+          <option value="200-">$200+</option>
+        </select>
+      </div>
     </div>
+    <div id="basket-container"></div>
 
   <div class="product-grid" id="product-grid"></div>
 </main>
@@ -111,6 +140,7 @@
 </dialog>
 
 
+
 <!-- Product detail Modal -->
 <dialog id="productDetailModal" class="modal">
   <div class="modal-content">
@@ -122,7 +152,5 @@
       <button class="close-button" aria-label="Close modal">&times;</button>
   </div>
 </dialog>
-
-
 </body>
 </html>

@@ -1,5 +1,7 @@
 function onClickCard(product) {
 
+  console.log('Product clicked:', product); 
+
   const modal = document.getElementById("productDetailModal");
   const titleElement = modal.querySelector(".modal-title");
   const imageElement = modal.querySelector(".modal-image");
