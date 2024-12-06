@@ -37,3 +37,5 @@ function applyFilters() {
 
   renderProducts(filteredProducts); 
 }
+
+

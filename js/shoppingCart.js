@@ -14,6 +14,23 @@ function loadFromLocalStorage() {
   return itemJSON ? JSON.parse(itemJSON) : [];
 }
 
+// New function to update basket icon
+function updateBasketIcon() {
+  const basketIcon = document.getElementById('shopping-cart-icon');
+  const cart = loadFromLocalStorage();
+  const totalItems = cart.length;
+
+  basketIcon.setAttribute('data-count', totalItems);
+  
+  if (totalItems > 0) {
+    basketIcon.classList.add('has-items');
+  } else {
+    basketIcon.classList.remove('has-items');
+  }
+}
+
+
+
 
 function onClickAddToCart (event, product){
   event.preventDefault();
@@ -23,7 +40,8 @@ function onClickAddToCart (event, product){
   saveDataToLocalStorage(cart);
 
   console.log(`Added ${product.title} to cart`);
-  console.log(cart)
+  console.log(cart);
+  updateBasketIcon(); // Call this function after adding item to cart
 }
 
 
@@ -89,12 +107,19 @@ function onClickRemoveFromCart(index, productCard) {
   // Remove the product card from the DOM immediately
   productCard.remove();
   if (cart.length === 0) {
-    emptyMessage.textContent = "Your cart is empty."; //didnt work 
-    shoppingCart.innerHTML = ""; 
-  } else {
-    emptyMessage.textContent = "";
-  }
+  //  mptyMessage.textContent = "Your cart is empty."; //didnt work 
+  //   shoppingCart.innerHTML = ""; 
+  // } else {
+  //   emptyMessage.textContent = "";
+  // } 
+  const emptyMessage = document.querySelector("#shopping-cart-empty-message");
+  const shoppingCart = document.querySelector(".shopping-list");
+  emptyMessage.textContent = "Your cart is empty.";
+  shoppingCart.innerHTML = ""; 
+}
 
+
+  updateBasketIcon(); // Call this function after removing item from cart
 }
 
 
@@ -104,4 +129,30 @@ document.addEventListener("DOMContentLoaded", () => {
     const cart = loadFromLocalStorage();
     displayProducts(cart);
   }
+  updateBasketIcon(); // Call this function when the page loads
 });
+// new function for basket
+function onClickCard(product) {
+  console.log('Product clicked:', product); 
+
+  const modal = document.getElementById("productDetailModal");
+  const titleElement = modal.querySelector(".modal-title");
+  const imageElement = modal.querySelector(".modal-image");
+  const descriptionElement = modal.querySelector(".modal-description");
+  const priceElement = modal.querySelector(".modal-price");
+  const ratingElement = modal.querySelector(".modal-rating");
+
+  titleElement.textContent = product.title;
+  imageElement.src = product.image;
+  imageElement.style.width = '300px';
+  descriptionElement.textContent = product.description;
+  priceElement.textContent = `$${product.price.toFixed(2)}`;
+  ratingElement.textContent = `Rating: ${product.rating.rate} (${product.rating.count} reviews)`;
+
+  modal.showModal();
+
+  const closeButton = modal.querySelector(".close-button");
+  closeButton.addEventListener("click", () => {
+    modal.close();
+  });
+} 

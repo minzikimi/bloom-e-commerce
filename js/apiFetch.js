@@ -14,6 +14,8 @@ async function fetchAPI() {
     renderProducts(products); 
     setupFilters(); 
 
+    updateBasketIcon(); // Call this function after fetching products
+
   } catch (error) {
     console.log("Error occurred:", error);
   }
@@ -67,4 +69,9 @@ function renderProducts(productsToRender) {
 }
 
 
-document.addEventListener("DOMContentLoaded", fetchAPI);
+// document.addEventListener("DOMContentLoaded", fetchAPI);
+document.addEventListener("DOMContentLoaded", () => {
+  fetchAPI();
+
+// updateBasketIcon(); // Call this function when the page loads
+});
