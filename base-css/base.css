@@ -238,10 +238,19 @@ header {
     #bloom{
       color:black;
     }
-  
-  
+
   }
   
+  .page-title {
+    font-weight: 100;
+    font-size: 3rem;
+  }
+
+  .title {
+    text-align: center;
+    padding: 3rem 0;
+  }
+
   
   #bloom{
     font-size: 5rem;
@@ -400,3 +409,6 @@ header {
       align-items: center;
     }
   }
+
+
+
