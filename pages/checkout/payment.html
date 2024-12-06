@@ -8,10 +8,8 @@
     <link
       rel="stylesheet"
       href="/bloom-e-commerce/pages/checkout/payment.css"
-      <link
-      rel="stylesheet"
-      href="/bloom-e-commerce/base-css/hero.css"
     />
+    <link rel="stylesheet" href="/bloom-e-commerce/base-css/hero.css" />
     <script src="/js/modal.js" defer></script>
   </head>
   <body>
@@ -68,170 +66,178 @@
       </nav>
     </header>
     <main>
-      <h1>SHIPPING</h1>
+      <div id="delivery">
+        <h1>SHIPPING</h1>
 
-      <!-- Delivery Options Section -->
-      <div class="delivery-options">
-        <h3>DELIVERY OPTIONS</h3>
-        <form id="delivery-form">
-          <div class="delivery-option">
-            <input
-              type="radio"
-              id="budbee"
-              name="delivery-option"
-              value="budbee"
-            />
-            <div class="delivery-content">
-              <span>Budbee</span>
-              <p>Delivered in 1-2 working days</p>
+        <!-- Delivery Options Section -->
+        <div class="delivery-options">
+          <h3>DELIVERY OPTIONS</h3>
+          <form id="delivery-form">
+            <div class="delivery-option">
+              <input
+                type="radio"
+                id="budbee"
+                name="delivery-option"
+                value="budbee"
+              />
+              <div class="delivery-content">
+                <span>Budbee</span>
+                <p>Delivered in 1-2 working days</p>
+              </div>
+              <img
+                src="/bloom-e-commerce/pages/checkout/payment.img/budbee-logo.svg"
+                alt="Budbee Logo"
+                class="delivery-image"
+              />
             </div>
-            <img
-              src="/bloom-e-commerce/pages/checkout/payment.img/budbee-logo.svg"
-              alt="Budbee Logo"
-              class="delivery-image"
-            />
-          </div>
 
-          <div class="delivery-option">
-            <input
-              type="radio"
-              id="instabox"
-              name="delivery-option"
-              value="instabox"
-            />
-            <div class="delivery-content">
-              <span>Instabox</span>
-              <p>Delivered in 1-2 working days</p>
+            <div class="delivery-option">
+              <input
+                type="radio"
+                id="instabox"
+                name="delivery-option"
+                value="instabox"
+              />
+              <div class="delivery-content">
+                <span>Instabox</span>
+                <p>Delivered in 1-2 working days</p>
+              </div>
+              <img
+                src="/bloom-e-commerce/pages/checkout/payment.img/instabox-logo.svg"
+                alt="Instabox Logo"
+                class="delivery-image"
+              />
             </div>
-            <img
-              src="/bloom-e-commerce/pages/checkout/payment.img/instabox-logo.svg"
-              alt="Instabox Logo"
-              class="delivery-image"
-            />
-          </div>
 
-          <div class="delivery-option">
-            <input type="radio" id="dhl" name="delivery-option" value="dhl" />
-            <div class="delivery-content">
-              <span>DHL</span>
-              <p>Delivered in 1-3 working days</p>
+            <div class="delivery-option">
+              <input type="radio" id="dhl" name="delivery-option" value="dhl" />
+              <div class="delivery-content">
+                <span>DHL</span>
+                <p>Delivered in 1-3 working days</p>
+              </div>
+              <img
+                src="/bloom-e-commerce/pages/checkout/payment.img/dhl-logo.svg"
+                alt="DHL Logo"
+                class="delivery-image"
+              />
             </div>
-            <img src="/bloom-e-commerce/pages/checkout/payment.img/dhl-logo.svg" alt="DHL Logo" class="delivery-image" />
-          </div>
 
-          <div class="delivery-option">
-            <input
-              type="radio"
-              id="postnord"
-              name="delivery-option"
-              value="postnord"
-            />
-            <div class="delivery-content">
-              <span>PostNord</span>
-              <p>Delivered in 2-6 working days</p>
+            <div class="delivery-option">
+              <input
+                type="radio"
+                id="postnord"
+                name="delivery-option"
+                value="postnord"
+              />
+              <div class="delivery-content">
+                <span>PostNord</span>
+                <p>Delivered in 2-6 working days</p>
+              </div>
+              <img
+                src="/bloom-e-commerce/pages/checkout/payment.img/postnord-logo.svg"
+                alt="PostNord Logo"
+                class="delivery-image"
+              />
             </div>
-            <img
-              src="/bloom-e-commerce/pages/checkout/payment.img/postnord-logo.svg"
-              alt="PostNord Logo"
-              class="delivery-image"
-            />
-          </div>
 
-          <button type="submit" class="continue-btn" id="continue-btn">
-            CONTINUE TO BILLING
-          </button>
-        </form>
+            <button type="submit" class="continue-btn" id="continue-btn">
+              <a href="#payment"> CONTINUE TO BILLING</a>
+            </button>
+          </form>
+        </div>
       </div>
 
-      <!-- Payment Section -->
-      <h1>PAYMENT</h1>
-      <div class="payment-options">
-        <h3>CHOOSE YOUR PAYMENT METHOD</h3>
-        <form id="payment-form">
-          <!-- Credit Card (Visa + MasterCard) -->
-          <div class="payment-option">
-            <input
-              type="radio"
-              id="credit-card"
-              name="payment-option"
-              value="credit-card"
-            />
-            <div class="payment-content">
-              <span>Credit Card</span>
-              <p>Pay with Visa or MasterCard</p>
+      <div id="payment">
+        <!-- Payment Section -->
+        <h1>PAYMENT</h1>
+        <div class="payment-options">
+          <h3>CHOOSE YOUR PAYMENT METHOD</h3>
+          <form id="payment-form">
+            <!-- Credit Card (Visa + MasterCard) -->
+            <div class="payment-option">
+              <input
+                type="radio"
+                id="credit-card"
+                name="payment-option"
+                value="credit-card"
+              />
+              <div class="payment-content">
+                <span>Credit Card</span>
+                <p>Pay with Visa or MasterCard</p>
+              </div>
+              <img
+                src="/bloom-e-commerce/pages/shoppingcart/img/visa-3-svgrepo-com.png"
+                alt="Visa and MasterCard Logos"
+                class="payment-image"
+              />
+              <img
+                src="/bloom-e-commerce/pages/shoppingcart/img/mastercard-svgrepo-com.png"
+                alt="Visa and MasterCard Logos"
+                class="payment-image"
+              />
             </div>
-            <img
-              src="/bloom-e-commerce/pages/shoppingcart/img/visa-3-svgrepo-com.png"
-              alt="Visa and MasterCard Logos"
-              class="payment-image"
-            />
-            <img
-            src="/bloom-e-commerce/pages/shoppingcart/img/mastercard-svgrepo-com.png"
-            alt="Visa and MasterCard Logos"
-            class="payment-image"
-          />
-          </div>
 
-          <!-- PayPal -->
-          <div class="payment-option">
-            <input
-              type="radio"
-              id="paypal"
-              name="payment-option"
-              value="paypal"
-            />
-            <div class="payment-content">
-              <span>PayPal</span>
-              <p>Pay securely via PayPal</p>
+            <!-- PayPal -->
+            <div class="payment-option">
+              <input
+                type="radio"
+                id="paypal"
+                name="payment-option"
+                value="paypal"
+              />
+              <div class="payment-content">
+                <span>PayPal</span>
+                <p>Pay securely via PayPal</p>
+              </div>
+              <img
+                src="/bloom-e-commerce/pages/shoppingcart/img/paypal-svgrepo-com.png"
+                alt="PayPal Logo"
+                class="payment-image"
+              />
             </div>
-            <img
-              src="/bloom-e-commerce/pages/shoppingcart/img/paypal-svgrepo-com.png"
-              alt="PayPal Logo"
-              class="payment-image"
-            />
-          </div>
 
-          <!-- Klarna -->
-          <div class="payment-option">
-            <input
-              type="radio"
-              id="klarna"
-              name="payment-option"
-              value="klarna"
-            />
-            <div class="payment-content">
-              <span>Klarna</span>
-              <p>Pay later with Klarna</p>
+            <!-- Klarna -->
+            <div class="payment-option">
+              <input
+                type="radio"
+                id="klarna"
+                name="payment-option"
+                value="klarna"
+              />
+              <div class="payment-content">
+                <span>Klarna</span>
+                <p>Pay later with Klarna</p>
+              </div>
+              <img
+                src="/bloom-e-commerce/pages/shoppingcart/img/klarna-svgrepo-com.png"
+                alt="Klarna Logo"
+                class="payment-image"
+              />
             </div>
-            <img
-              src="/bloom-e-commerce/pages/shoppingcart/img/klarna-svgrepo-com.png"
-              alt="Klarna Logo"
-              class="payment-image"
-            />
-          </div>
 
-          <!-- Apple Pay -->
-          <div class="payment-option">
-            <input
-              type="radio"
-              id="apple-pay"
-              name="payment-option"
-              value="apple-pay"
-            />
-            <div class="payment-content">
-              <span>Apple Pay</span>
-              <p>Pay with Apple Pay</p>
+            <!-- Apple Pay -->
+            <div class="payment-option">
+              <input
+                type="radio"
+                id="apple-pay"
+                name="payment-option"
+                value="apple-pay"
+              />
+              <div class="payment-content">
+                <span>Apple Pay</span>
+                <p>Pay with Apple Pay</p>
+              </div>
+              <img
+                src="/bloom-e-commerce/pages/shoppingcart/img/card-apple-pay-solid-svgrepo-com.png"
+                alt="Apple Pay Logo"
+                class="payment-image"
+              />
             </div>
-            <img
-              src="/bloom-e-commerce/pages/shoppingcart/img/card-apple-pay-solid-svgrepo-com.png"
-              alt="Apple Pay Logo"
-              class="payment-image"
-            />
-          </div>
-          <button type="submit" class="continue-btn" id="complete-btn">
-            COMPLETE PURCHASE
-          </button>
-        </form>
+            <button type="submit" class="continue-btn" id="complete-btn">
+              COMPLETE PURCHASE
+            </button>
+          </form>
+        </div>
       </div>
     </main>
 
