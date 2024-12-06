@@ -104,3 +104,20 @@
       bottom: 50px;
   }
 }
+
+.payment-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+
+
+img {
+  width: 60px;
+  height: auto;
+} 
+
+.payment-methods {
+  margin: 20px;
+  align-items: center;
+}
+}

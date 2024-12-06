@@ -317,6 +317,21 @@ header {
     }
   }
   
+.payment-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+img {
+  width: 60px;
+  height: auto;
+} 
+
+.payment-methods {
+  margin: 20px;
+  align-items: center;
+}
   .footer-bottom {
     text-align: center;
     margin-top: 2rem;
