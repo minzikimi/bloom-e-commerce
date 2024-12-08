@@ -1,6 +1,6 @@
 function onClickCard(product) {
 
-  console.log('Product clicked:', product); 
+  console.log("Product clicked:", product); 
 
   const modal = document.getElementById("productDetailModal");
   const titleElement = modal.querySelector(".modal-title");
@@ -23,3 +23,16 @@ function onClickCard(product) {
     modal.close();
   });
 }
+
+
+//message to show users that item was successfully added
+function showNotification(message) {
+  const notification = document.getElementById("notification");
+  notification.textContent = message; 
+  notification.style.display = "block"; 
+
+  setTimeout(() => {
+      notification.style.display = "none"; 
+  }, 3000); 
+}
+

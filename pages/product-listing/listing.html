@@ -40,7 +40,7 @@
             <div class="nav-icons">
               <a href="/pages/shoppingcart/shoppingcart.html"  class="icon-link" id="shopping-cart-icon">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"  width="24" height="24"><path d="M96 152l0 8-48 0 0-8C48 68.1 116.1 0 200 0l48 0c83.9 0 152 68.1 152 152l0 8-48 0 0-8c0-57.4-46.6-104-104-104l-48 0C142.6 48 96 94.6 96 152zM0 224c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-5.1 0L388.5 469c-2.6 24.4-23.2 43-47.7 43l-233.6 0c-24.6 0-45.2-18.5-47.7-43L37.1 256 32 256c-17.7 0-32-14.3-32-32z"/></svg>
-            </a>
+            </a>  
                 <a href="#" class="icon-link" id="login-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
                         <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/>
@@ -52,6 +52,10 @@
 
 <main class="container">
     <!-- Main content will go here -->
+    <div id="notification" class="notification" style="display: none;">
+
+    </div>
+
     <div class="shop-intro">
     <h2>Shop</h2>
     <p>Explore a curated selection of products, filter their preferences, and easily find items that meet their needs, all while enjoying a seamless shopping experience.</p>
@@ -59,20 +63,17 @@
     <div class="filters">
       <div>
         <label for="category-filter">Filter by Category:</label>
-        <select id="category-filter">
+        <select id="category-filter"  class="filter">
             <option value="all">All Categories</option>
             <option value="electronics">Electronics</option>
-            <!-- <option value="clothing">Clothing</option> -->
             <option value="Jewelery">Jewelry</option>
-            <!-- <option value="Accessory">Accessories</option> -->
             <option value="men's clothing">Men's Clothing</option>
             <option value="women's clothing">Women's Clothing</option>
         </select>
       </div>
-     
       <div>
         <label for="rating-filter">Filter by rating:</label>
-        <select id="rating-filter">
+        <select id="rating-filter" class="filter">
             <option value="all">All Ratings</option>
             <option value="4">4 Stars & Up</option>
             <option value="3">3 Stars & Up</option>
@@ -82,7 +83,7 @@
       </div>
       <div>
         <label for="price-filter">Filter by Price:</label>
-        <select id="price-filter">
+        <select id="price-filter" class="filter">
           <option value="all">All Prices</option>
           <option value="0-50">$0 - $50</option>
           <option value="50-100">$50 - $100</option>
@@ -112,9 +113,9 @@
     </div>
     <div class="footer-right">
       <div class="footer-social-links">
-        <a href="#" class="footer-social-link"  >Instagram</a>
-        <a href="#" class="footer-social-link">TikTok</a>
-        <a href="#" class="footer-social-link">Facebook</a>
+        <a href="https://www.instagram.com/bloom_convenient?igsh=MnVyOXJvNXdzOXpv&utm_source=qr" class="footer-social-link"  >Instagram</a>
+        <a href="https://www.tiktok.com/@bloomconvenience" class="footer-social-link">TikTok</a>
+        <a href="https://www.facebook.com/profile.php?id=61569276249799 " class="footer-social-link">Facebook</a>
       </div>
     </div>
   </div>

@@ -10,6 +10,7 @@ main {
     text-align: center;
     margin-bottom: 20px;
     color: #004d00;
+    font-family: var(--font-main);
   }
 }
 
@@ -78,6 +79,7 @@ main {
   color: white;
   border: none;
   border-radius: 5px;
+  
   cursor: pointer;
   font-size: 16px;
   margin-top: 20px;
@@ -86,6 +88,16 @@ main {
 
 .continue-btn:hover {
   background-color: #003300;
+}
+
+.billing-btn-wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  a{
+    text-align: center;
+  }
 }
 
 /* For smaller screens, adjust padding and layout */
