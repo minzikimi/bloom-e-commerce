@@ -85,7 +85,7 @@
               <p>Delivered in 1-2 working days</p>
             </div>
             <img
-              src="payment.img/budbee-logo.svg"
+              src="/assets/icons/budbee-logo.svg"
               alt="Budbee Logo"
               class="delivery-image"
             />
@@ -103,7 +103,7 @@
               <p>Delivered in 1-2 working days</p>
             </div>
             <img
-              src="payment.img/instabox-logo.svg"
+            src="/assets/icons/dhl-logo.svg"
               alt="Instabox Logo"
               class="delivery-image"
             />
@@ -115,7 +115,7 @@
               <span>DHL</span>
               <p>Delivered in 1-3 working days</p>
             </div>
-            <img src="payment.img/dhl-logo.svg" alt="DHL Logo" class="delivery-image" />
+            <img src="/assets/icons/postnord-logo.svg" alt="DHL Logo" class="delivery-image" />
           </div>
 
           <div class="delivery-option">
@@ -130,15 +130,15 @@
               <p>Delivered in 2-6 working days</p>
             </div>
             <img
-              src="payment.img/postnord-logo.svg"
+              src="/assets/icons/visa.svg"
               alt="PostNord Logo"
               class="delivery-image"
             />
           </div>
 
-          <button type="submit" class="continue-btn" id="continue-btn">
-            CONTINUE TO BILLING
-          </button>
+          <div class="billing-btn-wrapper">
+            <a href="#payment-form" class="continue-btn" id="continue-btn">CONTINUE TO BILLING</a>
+          </div>
         </form>
       </div>
 
@@ -160,12 +160,12 @@
               <p>Pay with Visa or MasterCard</p>
             </div>
             <img
-              src="/pages/shoppingcart/img/visa-3-svgrepo-com.png"
+              src="/assets/icons/visa.svg"
               alt="Visa and MasterCard Logos"
               class="payment-image"
             />
             <img
-            src="/pages/shoppingcart/img/mastercard-svgrepo-com.png"
+            src="/assets/icons/mastercard.svg"
             alt="Visa and MasterCard Logos"
             class="payment-image"
           />
@@ -184,7 +184,7 @@
               <p>Pay securely via PayPal</p>
             </div>
             <img
-              src="/pages/shoppingcart/img/paypal-svgrepo-com.png"
+              src="/assets/icons/paypal.png"
               alt="PayPal Logo"
               class="payment-image"
             />
@@ -203,7 +203,7 @@
               <p>Pay later with Klarna</p>
             </div>
             <img
-              src="/pages/shoppingcart/img/klarna-svgrepo-com.png"
+              src="/assets/icons/klarna.svg"
               alt="Klarna Logo"
               class="payment-image"
             />
@@ -222,14 +222,16 @@
               <p>Pay with Apple Pay</p>
             </div>
             <img
-              src="/pages/shoppingcart/img/card-apple-pay-solid-svgrepo-com.png"
+              src="/assets/icons/applepay.svg"
               alt="Apple Pay Logo"
               class="payment-image"
             />
           </div>
-          <button type="submit" class="continue-btn" id="complete-btn">
+          
+          <div class="billing-btn-wrapper">
+          <a href="/pages/checkout/thankyou.html" class="continue-btn" id="complete-btn">
             COMPLETE PURCHASE
-          </button>
+          </a></div>
         </form>
       </div>
     </main>
