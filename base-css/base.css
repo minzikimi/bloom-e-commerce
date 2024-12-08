@@ -259,6 +259,19 @@ header {
     font-family:var(--font-logo);
   }
   
+  
+.notification {
+  position: fixed;
+  top: 150px;
+  right: 230px;
+  background-color: #b22222;
+  color: white; 
+  padding: 10px;
+  border-radius: 5px;
+  z-index: 1000; 
+  font-family: var(--font-nav);
+}
+
   /* footer */
   
   .footer {

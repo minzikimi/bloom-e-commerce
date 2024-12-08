@@ -1,4 +1,8 @@
 // apiFetch.js
+<<<<<<< HEAD
+let products = []; 
+=======
+>>>>>>> 032c4e0fa9cbb1a1a2a93e294539d030abbcece9
 
 async function fetchAPI() {
   const apiURL = "https://fakestoreapi.com/products";
@@ -12,7 +16,6 @@ async function fetchAPI() {
 
     console.log(products);
     renderProducts(products); 
-    setupFilters(); 
 
   } catch (error) {
     console.log("Error occurred:", error);
@@ -67,4 +70,8 @@ function renderProducts(productsToRender) {
 }
 
 
-document.addEventListener("DOMContentLoaded", fetchAPI);
+document.addEventListener("DOMContentLoaded", () => {
+  fetchAPI();
+  setupFilters();
+// updateBasketIcon(); // Call this function when the page loads
+});
