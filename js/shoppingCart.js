@@ -249,10 +249,22 @@ function showNotification(message) {
   }, 3000); 
 }
 
-
 document.addEventListener("DOMContentLoaded", () => {
-  let cart = loadFromLocalStorage();
-  displayAddedProducts(cart);
+
+  const shoppingCart = document.querySelector(".shopping-list");
+  if (shoppingCart) {
+    let cart = loadFromLocalStorage();
+    displayAddedProducts(cart); 
+    // updateSummary();
+  }
   updateSummary();
   updateCartItemCount();
+  
 });
+
+// document.addEventListener("DOMContentLoaded", () => {
+//   let cart = loadFromLocalStorage();
+//   displayAddedProducts(cart);
+//   updateSummary();
+//   updateCartItemCount();
+// });
