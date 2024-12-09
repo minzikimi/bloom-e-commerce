@@ -149,12 +149,12 @@ function onClickRemoveFromCart(index, productCard) {
   // Remove the product card from the DOM immediately
   productCard.remove();
   updateSummary();
-  if (cart.length === 0) {
-    emptyMessage.textContent = "Your cart is empty."; //didnt work 
-    shoppingCart.innerHTML = ""; 
-  } else {
-    emptyMessage.textContent = "";
-  }
+  // if (cart.length === 0) {
+  //   emptyMessage.textContent = "Your cart is empty."; //didnt work 
+  //   shoppingCart.innerHTML = ""; 
+  // } else {
+  //   emptyMessage.textContent = "";
+  // }
   displayAddedProducts(cart);
 }
 
@@ -252,9 +252,30 @@ document.addEventListener("DOMContentLoaded", () => {
   
 });
 
+//message to show users that item was successfully added
+function showNotification(message) {
+  const notification = document.getElementById("notification");
+  notification.textContent = message; 
+  notification.style.display = "block"; 
+
+  setTimeout(() => {
+      notification.style.display = "none"; 
+  }, 3000); 
+}
+
 // document.addEventListener("DOMContentLoaded", () => {
 //   let cart = loadFromLocalStorage();
 //   displayAddedProducts(cart);
 //   updateSummary();
 //   updateCartItemCount();
 // });
+
+module.exports ={
+  onClickAddToCart,
+    onClickRemoveFromCart,
+    updateQuantity,
+    updateSummary,
+    loadFromLocalStorage,
+    saveDataToLocalStorage,
+    showNotification
+}
