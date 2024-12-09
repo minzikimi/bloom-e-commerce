@@ -1,3 +1,3 @@
 # e-commerce-website
 
-11.12.2024
+Hyper Island MOCK E-COMMERCE WEBSITE PROJECT 
