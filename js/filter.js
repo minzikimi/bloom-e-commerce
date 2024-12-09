@@ -45,3 +45,6 @@ function applyFilters() {
   renderProducts(filteredProducts); 
 }
 
+module.exports = {
+  applyFilters
+}

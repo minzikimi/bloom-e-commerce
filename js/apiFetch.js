@@ -71,3 +71,5 @@ document.addEventListener("DOMContentLoaded", () => {
   setupFilters();
 // updateBasketIcon(); // Call this function when the page loads
 });
+
+module.exports = {fetchAPI};
