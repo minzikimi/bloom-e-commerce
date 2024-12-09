@@ -142,6 +142,8 @@ function onClickRemoveFromCart(index, productCard) {
   let cart = loadFromLocalStorage();
   cart.splice(index,1);
 
+  const emptyMessage = document.querySelector("#shopping-cart-empty-message");
+
   console.log(`Removed item at index ${index}`);
   saveDataToLocalStorage(cart);
   // Remove the product card from the DOM immediately
@@ -192,7 +194,7 @@ function updateQuantity(index, change) {
     const shippingElement = document.querySelector(".shippingPrice");
     const estimatedTotalElement = document.querySelector(".estimatedTotalPrice");
   
-    let shippingCost = 19;//standard shipping fee;
+    let shippingCost = 5;//standard shipping fee;
     let cart = loadFromLocalStorage();
   
     if (cart.length === 0) {
@@ -211,8 +213,8 @@ function updateQuantity(index, change) {
         subtotal += price * quantity;
     });
   
-    //free shipping over 500kr purchase
-    if (subtotal >= 500) {
+    //free shipping over 500USD purchase
+    if (subtotal >= 100) {
       shippingCost = 0;
     }
     subtotalElement.textContent = `${subtotal.toFixed(2)}`;
@@ -236,18 +238,6 @@ function updateQuantity(index, change) {
     numOfItemElement.textContent = ` (${totalQuantity})`; // Add parentheses for better readability
   }
 
-
-
-//message to show users that item was successfully added
-function showNotification(message) {
-  const notification = document.getElementById("notification");
-  notification.textContent = message; 
-  notification.style.display = "block"; 
-
-  setTimeout(() => {
-      notification.style.display = "none"; 
-  }, 3000); 
-}
 
 document.addEventListener("DOMContentLoaded", () => {
 
