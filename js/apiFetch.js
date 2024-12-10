@@ -32,6 +32,7 @@ function renderProducts(productsToRender) {
     const imgElement = document.createElement("img");
     imgElement.src = product.image;
     imgElement.alt = product.title;
+    imgElement.loading = "lazy";
     productDetailsElement.appendChild(imgElement);
 
     const titleElement = document.createElement("h3");
