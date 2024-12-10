@@ -2,7 +2,7 @@
 Welcome to Bloom, an elegant and responsive e-commerce platform. Bloom is designed to provide a seamless shopping experience for users while offering developers a clean and scalable foundation for further customization.
 
 
-## Project Link
+## <u>Project Link</u>
 Check out the live demo of the project: https://bloom-ecommerce-hi26.netlify.app/ .
 
  
