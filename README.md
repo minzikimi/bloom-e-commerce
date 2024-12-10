@@ -1,4 +1,4 @@
-Hyper Island TEAM PROJECT 
+Hyper Island Team Project 
 E-COMMERCE WEBSITE
 
 ## Languages & Tools
