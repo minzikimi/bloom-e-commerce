@@ -1,6 +1,11 @@
-Hyper Island Team Project 
-E-COMMERCE WEBSITE
+# Bloom: E-Commerce Platform
+Welcome to Bloom, an elegant and responsive e-commerce platform. Bloom is designed to provide a seamless shopping experience for users while offering developers a clean and scalable foundation for further customization.
 
+
+## Project Link
+Check out the live demo of the project: https://bloom-ecommerce-hi26.netlify.app/ .
+
+ 
 ## Languages & Tools
 #### JavaScript (ES6): 
 Interactive and dynamic functionalities.
