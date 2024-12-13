@@ -52,6 +52,16 @@ Gracefully handles edge cases, such as:
 - Compatible with modern web browsers.
 
 
+## Installation & Commands
+a) For testing:
+- install Jest: npm install --save-dev jest
+- add "scripts": { "test": "jest" } in package.json file
+- install jsdom: npm install jsdom @types/jsdom --save-dev
+- install jsdom environment: npm install --save-dev jest-environment-jsdom
+- install @types: npm install --save-dev @types/jsdom
+- run the tests: npm test
+
+  
 ## Outcome
 Bloom provides a flexible, extendable platform for building e-commerce applications. With a focus on modular code and separation of concerns, the project is designed to be maintainable and scalable. Automation testing with Jest ensures high-quality code, while responsive design and localStorage integration offer an excellent user experience.
 
